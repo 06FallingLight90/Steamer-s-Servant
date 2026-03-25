@@ -370,12 +370,12 @@ if (uni.restoreGlobal) {
               this.health -= 10;
               this.showAnimation("-10", "subtract");
             }
-          }, 1e3);
+          }, 600);
         }, 1e3);
       },
       // 取消长按
       cancelLongPress(type) {
-        formatAppLog("log", "at components/MainCounter.vue:197", this.longPressTimer);
+        formatAppLog("log", "at components/MainCounter.vue:191", this.longPressTimer);
         if (this.longPressTimer && !this.isLongPressing) {
           clearTimeout(this.longPressTimer);
           if (type == "add") {
@@ -453,7 +453,7 @@ if (uni.restoreGlobal) {
               vue.createElementVNode(
                 "text",
                 { class: "health" },
-                vue.toDisplayString($data.health || 40),
+                vue.toDisplayString($data.health ?? 40),
                 1
                 /* TEXT */
               ),
@@ -490,12 +490,9 @@ if (uni.restoreGlobal) {
               {
                 class: "click-area top-area",
                 style: vue.normalizeStyle({ backgroundColor: $props.mainColor }),
-                onMousedown: _cache[0] || (_cache[0] = (...args) => $options.startAddLongPress && $options.startAddLongPress(...args)),
-                onMouseup: _cache[1] || (_cache[1] = (...args) => $options.cancelAddLongPress && $options.cancelAddLongPress(...args)),
-                onMouseleave: _cache[2] || (_cache[2] = (...args) => $options.cancelAddLongPress && $options.cancelAddLongPress(...args)),
-                onTouchstart: _cache[3] || (_cache[3] = (...args) => $options.startAddLongPress && $options.startAddLongPress(...args)),
-                onTouchend: _cache[4] || (_cache[4] = (...args) => $options.cancelAddLongPress && $options.cancelAddLongPress(...args)),
-                onTouchcancel: _cache[5] || (_cache[5] = (...args) => $options.cancelAddLongPress && $options.cancelAddLongPress(...args))
+                onTouchstart: _cache[0] || (_cache[0] = (...args) => $options.startAddLongPress && $options.startAddLongPress(...args)),
+                onTouchend: _cache[1] || (_cache[1] = (...args) => $options.cancelAddLongPress && $options.cancelAddLongPress(...args)),
+                onTouchcancel: _cache[2] || (_cache[2] = (...args) => $options.cancelAddLongPress && $options.cancelAddLongPress(...args))
               },
               null,
               36
@@ -506,12 +503,9 @@ if (uni.restoreGlobal) {
               {
                 class: "click-area bottom-area",
                 style: vue.normalizeStyle({ backgroundColor: $props.mainColor }),
-                onMousedown: _cache[6] || (_cache[6] = (...args) => $options.startSubtractLongPress && $options.startSubtractLongPress(...args)),
-                onMouseup: _cache[7] || (_cache[7] = (...args) => $options.cancelSubtractLongPress && $options.cancelSubtractLongPress(...args)),
-                onMouseleave: _cache[8] || (_cache[8] = (...args) => $options.cancelSubtractLongPress && $options.cancelSubtractLongPress(...args)),
-                onTouchstart: _cache[9] || (_cache[9] = (...args) => $options.startSubtractLongPress && $options.startSubtractLongPress(...args)),
-                onTouchend: _cache[10] || (_cache[10] = (...args) => $options.cancelSubtractLongPress && $options.cancelSubtractLongPress(...args)),
-                onTouchcancel: _cache[11] || (_cache[11] = (...args) => $options.cancelSubtractLongPress && $options.cancelSubtractLongPress(...args))
+                onTouchstart: _cache[3] || (_cache[3] = (...args) => $options.startSubtractLongPress && $options.startSubtractLongPress(...args)),
+                onTouchend: _cache[4] || (_cache[4] = (...args) => $options.cancelSubtractLongPress && $options.cancelSubtractLongPress(...args)),
+                onTouchcancel: _cache[5] || (_cache[5] = (...args) => $options.cancelSubtractLongPress && $options.cancelSubtractLongPress(...args))
               },
               null,
               36

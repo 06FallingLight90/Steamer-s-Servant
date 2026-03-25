@@ -20,7 +20,7 @@
     <!-- 内层负责旋转和动态尺寸 ：style做到动态绑定组件css -->
     <view class="rotator" :style="rotatorStyle">
       <view class="content">
-        <text class="health">{{ health || 40 }}</text>
+        <text class="health">{{ health ?? 40 }}</text>
         <!-- 数字变化动画 -->
         <view
           v-for="item in animations"
@@ -35,9 +35,6 @@
       <view
         class="click-area top-area"
         :style="{ backgroundColor: mainColor }"
-        @mousedown="startAddLongPress"
-        @mouseup="cancelAddLongPress"
-        @mouseleave="cancelAddLongPress"
         @touchstart="startAddLongPress"
         @touchend="cancelAddLongPress"
         @touchcancel="cancelAddLongPress"
@@ -45,9 +42,6 @@
       <view
         class="click-area bottom-area"
         :style="{ backgroundColor: mainColor }"
-        @mousedown="startSubtractLongPress"
-        @mouseup="cancelSubtractLongPress"
-        @mouseleave="cancelSubtractLongPress"
         @touchstart="startSubtractLongPress"
         @touchend="cancelSubtractLongPress"
         @touchcancel="cancelSubtractLongPress"
@@ -188,7 +182,7 @@ export default {
             this.health -= 10;
             this.showAnimation('-10', 'subtract');
           }
-        }, 1000);
+        }, 600);
       }, 1000);
     },
     // 取消长按
