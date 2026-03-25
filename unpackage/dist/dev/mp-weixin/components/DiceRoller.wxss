@@ -1,0 +1,125 @@
+
+.dice-container.data-v-0b7b4e9c {
+	position: relative;
+	display: inline-block;
+}
+.dice-button.data-v-0b7b4e9c {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: clamp(60px, 10vw, 80px);
+	height: clamp(60px, 10vw, 80px);
+	background-color: #f0f0f0;
+	border: clamp(2px, 0.3vw, 3px) solid #ccc;
+	border-radius: 50%;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	-webkit-user-select: none;
+	        user-select: none;
+}
+.dice-button.data-v-0b7b4e9c:active {
+	transform: scale(0.95);
+	background-color: #e0e0e0;
+}
+.dice-icon.data-v-0b7b4e9c {
+	font-size: clamp(24px, 4vw, 32px);
+}
+
+
+/* 骰子选择菜单 */
+.dice-select-menu.data-v-0b7b4e9c {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	background-color: white;
+	border: clamp(1px, 0.2vw, 2px) solid #ccc;
+	border-radius: clamp(4px, 0.5vw, 8px);
+	box-shadow: 0 clamp(2px, 0.3vw, 4px) clamp(8px, 1vw, 12px) rgba(0, 0, 0, 0.1);
+	z-index: 1000;
+	margin-top: clamp(4px, 0.5vw, 8px);
+	min-width: clamp(100px, 15vw, 120px);
+}
+.menu-item.data-v-0b7b4e9c {
+	padding: clamp(8px, 1vw, 12px) clamp(12px, 1.5vw, 16px);
+	font-size: clamp(14px, 2vw, 16px);
+	color: #333;
+	cursor: pointer;
+	transition: background-color 0.2s ease;
+}
+.menu-item.data-v-0b7b4e9c:hover {
+	background-color: #f5f5f5;
+}
+
+/* 自定义输入 */
+.custom-input-container.data-v-0b7b4e9c {
+	position: absolute;
+	top: 100%;
+	right: 0;
+	background-color: white;
+	border: clamp(1px, 0.2vw, 2px) solid #ccc;
+	border-radius: clamp(4px, 0.5vw, 8px);
+	box-shadow: 0 clamp(2px, 0.3vw, 4px) clamp(8px, 1vw, 12px) rgba(0, 0, 0, 0.1);
+	z-index: 1000;
+	margin-top: clamp(4px, 0.5vw, 8px);
+	padding: clamp(8px, 1vw, 12px);
+	min-width: clamp(150px, 20vw, 180px);
+}
+.custom-input.data-v-0b7b4e9c {
+	width: 100%;
+	padding: clamp(8px, 1vw, 12px);
+	border: clamp(1px, 0.2vw, 2px) solid #ccc;
+	border-radius: clamp(4px, 0.5vw, 6px);
+	font-size: clamp(14px, 2vw, 16px);
+	margin-bottom: clamp(8px, 1vw, 12px);
+}
+.custom-buttons.data-v-0b7b4e9c {
+	display: flex;
+	justify-content: space-between;
+}
+.custom-btn.data-v-0b7b4e9c {
+	flex: 1;
+	padding: clamp(6px, 0.8vw, 10px);
+	text-align: center;
+	font-size: clamp(14px, 2vw, 16px);
+	border-radius: clamp(4px, 0.5vw, 6px);
+	cursor: pointer;
+	transition: all 0.2s ease;
+}
+.custom-btn.data-v-0b7b4e9c:not(.cancel) {
+	background-color: #4CAF50;
+	color: white;
+	margin-right: clamp(8px, 1vw, 12px);
+}
+.custom-btn.cancel.data-v-0b7b4e9c {
+	background-color: #f0f0f0;
+	color: #666;
+}
+
+/* 结果显示 */
+.result-display.data-v-0b7b4e9c {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0) rotate(-10deg);
+	font-size: clamp(80px, 20vw, 160px);
+	font-weight: bold;
+	color: #FF5722;
+	text-shadow: 
+		-2px -2px 0 #000,
+		2px -2px 0 #000,
+		-2px 2px 0 #000,
+		2px 2px 0 #000;
+	z-index: 9999;
+	opacity: 0;
+	transition: all 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+.result-display.show.data-v-0b7b4e9c {
+	transform: translate(-50%, -50%) scale(1) rotate(0deg);
+	opacity: 1;
+}
+.result-display.hide.data-v-0b7b4e9c {
+	opacity: 0;
+	transform: translate(-50%, -50%) scale(0.8) rotate(5deg);
+	transition: all 0.4s ease-out;
+}

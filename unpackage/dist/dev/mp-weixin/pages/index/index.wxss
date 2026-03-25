@@ -1,0 +1,51 @@
+
+.grid-container.data-v-1cf27b2a {
+	  display: grid;
+	  grid-template-columns: 1fr 1fr;  /* 两列等分 */
+	  grid-template-rows: 1fr 1fr;     /* 两行等分 */
+	  height: 100vh;                   /* 全屏高度 */
+	  width: 100vw;                    /* 全屏宽度 */
+	  gap: 2px;                        /* 组件之间的间距（可选） */
+	  background-color: #ccc;          /* 间距的背景色 */
+}
+.grid-item.data-v-1cf27b2a {
+	  border: 1px solid #ddd;
+	  border-radius: 20px;
+	  box-sizing: border-box;
+	  overflow: hidden;
+	  position: relative;
+}
+	
+	/*刷新按钮样式*/
+.refresh-btn.data-v-1cf27b2a {
+	  position: fixed;
+	  bottom: 0.5rem;
+	  right: 0.5rem;
+	  z-index: 999;
+	  padding: 0.5rem 0.5rem;
+	  line-height: 1;
+	  background-color: rgba(0,0,0,0);
+	  color: blue;
+	  border: none;
+	  border-radius: 50%;
+	  font-size: 25px;
+	  font-weight: 700;
+	  cursor: pointer;
+	  transition: all 0.3s ease;
+}
+.refresh-btn.data-v-1cf27b2a:hover {
+	  background-color: #0056b3;
+	  transform: scale(1.05);
+}
+.refresh-btn.data-v-1cf27b2a:active {
+	  transform: scale(0.95);
+}
+	
+	/* 骰子容器样式 */
+.dice-container.data-v-1cf27b2a {
+	  position: fixed;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%, -50%);
+	  z-index: 998;
+}
