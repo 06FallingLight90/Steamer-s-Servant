@@ -20,3 +20,31 @@
 由于是自己做着玩的所以更新什么的就随缘了qwq
 
 有问题或建议或合作开发意向请反馈！！！
+
+---
+
+## English Version
+
+[![Download APK](https://img.shields.io/badge/Download-Latest%20APK-brightgreen)](https://github.com/06FallingLight90/Steamer-s-Servant/releases/download/v1.0.0/steamer-s-servant.apk)
+
+Steamer-s-Servant is a personal Magic: The Gathering EDH life counter application that can also record commander damage and poison counters.
+
+Released on Android (due to lack of Apple certificate)
+
+![App Icon](static/sample.png "App Icon")
+
+Supports dice rolling functionality
+
+Click the upper half of the life counter to add 1 life point, click the lower half to subtract 1 life point. Long press to add or subtract 10 life points at once.
+
+--------------------------
+Developed using the uni-app framework
+
+Originally planned to release on WeChat Mini Program, but the registration and certification process is cumbersome and requires payment
+
+Limited technical skills, only basic functionality, app size not optimized. Experts please be advised.
+
+Updates are occasional since this is a personal project
+
+Please provide feedback if you have any questions, suggestions, or collaboration ideas!
+
