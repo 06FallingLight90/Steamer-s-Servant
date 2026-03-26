@@ -1,8 +1,0 @@
-{
-  "navigationBarTitleText": "uni-app",
-  "navigationStyle": "custom",
-  "usingComponents": {
-    "main-counter": "../../components/MainCounter",
-    "dice-roller": "../../components/DiceRoller"
-  }
-}
