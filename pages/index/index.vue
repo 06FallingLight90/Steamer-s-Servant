@@ -45,14 +45,9 @@
 			        content: '确定要刷新页面吗？',
 			        success: (res) => {
 			            if (res.confirm) {
-			                // #ifdef H5
-			                window.location.reload();  // H5环境刷新
-			                // #endif
-			                // #ifdef MP-WEIXIN
 			                uni.reLaunch({
-			                    url: '/pages/index/index'
-			                });
-			                // #endif
+    										url: '/pages/index/index'
+											});
 			            }
 			        }
 			    });
